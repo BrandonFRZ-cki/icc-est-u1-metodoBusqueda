@@ -9,10 +9,14 @@ public class App {
         int arreglo [] = {1,2,3,4,5,6,7,8,9,10} ;
 
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Ingrese el numero  buscar");
+        System.out.print("Ingrese el numero  buscar → ");
         int valor = scanner.nextInt();
         int posicionLineal = metodoBusqueda.busquedaLineal(arreglo, valor);
-        System.out.println(posicionLineal);
 
+        if (posicionLineal == -1) {
+            System.out.println("No existe el elemento");
+        }else{
+            System.out.println(posicionLineal);
+        }
     }
 }
