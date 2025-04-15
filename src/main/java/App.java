@@ -1,22 +1,21 @@
 import controllers.MetodoBusqueda;
+import models.Persona;
 
-import java.util.Scanner;
 
 public class App {
     public static void main(String[] args) {
-        MetodoBusqueda metodoBusqueda = new MetodoBusqueda();
 
-        int arreglo [] = {1,2,3,4,5,6,7,8,9,10} ;
+        Persona[] personas = new Persona[7];
+        personas[0] = new Persona("Juan",101);
+        personas[1] = new Persona("Maria",102);
+        personas[2] = new Persona("Carlos",103);
+        personas[3] = new Persona("Ana",104);
+        personas[4] = new Persona("Luis",105);
+        personas[5] = new Persona("Sofia",106);
+        personas[6] = new Persona("Pedro",107);
 
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Ingrese el numero  buscar → ");
-        int valor = scanner.nextInt();
-        int posicionLineal = metodoBusqueda.busquedaLineal(arreglo, valor);
+        MetodoBusqueda metodoBusqueda = new MetodoBusqueda(personas);
 
-        if (posicionLineal == -1) {
-            System.out.println("No existe el elemento");
-        }else{
-            System.out.println(posicionLineal);
-        }
+
     }
 }
