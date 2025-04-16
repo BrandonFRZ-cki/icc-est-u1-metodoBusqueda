@@ -1,5 +1,7 @@
 import controllers.MetodoBusqueda;
+import controllers.MetodoBusquedaBinaria;
 import models.Persona;
+import views.ShowConsole;
 
 
 public class App {
@@ -16,6 +18,9 @@ public class App {
 
         MetodoBusqueda metodoBusqueda = new MetodoBusqueda(personas);
 
+        MetodoBusquedaBinaria metodoBusquedaBinaria = new MetodoBusquedaBinaria(personas);
+        metodoBusquedaBinaria.showPersonByCode();
+        metodoBusquedaBinaria.showPersonByName();
 
     }
 }

@@ -11,6 +11,7 @@ public class MetodoBusqueda {
     public MetodoBusqueda(Persona[] personas){
         showConsole = new ShowConsole();
         this.personas = personas;
+        showConsole.showMessage("\n------- Metodos de Busqueda Secuencial");
         showPersonByCode();
     }
 
